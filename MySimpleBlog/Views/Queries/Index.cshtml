@@ -1,0 +1,33 @@
+﻿@model MySimpleBlog.Data.User
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="h1">
+                <div class="card">
+                    <div class="card-header">
+                        @Html.DisplayFor(model => model.FirstName)
+                        &nsbp;
+                        @Html.DisplayFor(model => model.LastName)
+                        &nsbp;
+                        @Html.DisplayFor(model => model.GetNumberOfPosts())
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            @foreach (var item in Model.Posts)
+                            {
+                                <li>
+                                    @item.Content
+                                </li>
+                            }
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

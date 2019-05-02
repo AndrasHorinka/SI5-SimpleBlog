@@ -21,6 +21,7 @@ namespace MySimpleBlog.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
+            
             //return View((from x in await _context.Users.ToListAsync() select x.Posts.Count).Max());
             return View((from x in await _context.Users.ToListAsync() select x).Max());
         }

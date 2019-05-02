@@ -13,17 +13,12 @@ namespace MySimpleBlog.Data
         public string LastName { get; set; }
         public List<Post> Posts { get; set; }
 
-        public int GetNumberOfPosts()
-        {
-            return this.Posts.Count;
-        }
+        public int NumberOfPosts => Posts.Count;
 
         public int CompareTo(object obj)
         {
             User otherUser = (User)obj;
-
-
-            return GetNumberOfPosts().CompareTo(otherUser.GetNumberOfPosts());
+            return NumberOfPosts.CompareTo(otherUser.NumberOfPosts);
         }
     }
 }

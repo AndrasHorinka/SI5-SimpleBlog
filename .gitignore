@@ -8,7 +8,9 @@
 *.user
 *.userosscache
 *.sln.docstates
-/PetFinder.Core/Migrations/*
+/MySimpleBlog/bin
+/MySimpleBlog/obj
+
 /PetFinder.Core/Migration
 
 # User-specific files (MonoDevelop/Xamarin Studio)

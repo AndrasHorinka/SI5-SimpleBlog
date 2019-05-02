@@ -10,5 +10,7 @@ namespace MySimpleBlog.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Post> Posts { get; set; }
-        }
+        public DbSet<Blog> Blogs { get; set; }
+
+    }
 }

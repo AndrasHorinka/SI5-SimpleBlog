@@ -19,6 +19,7 @@ namespace MySimpleBlog.Controllers
         // GET: Posts
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.Posts
                 .Include(p => p.User)
                 .ToListAsync());

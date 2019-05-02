@@ -25,7 +25,7 @@ namespace MySimpleBlog.Controllers
             /* ez valoszinuleg nem jo igy asyncben, mert elobb megy vissza az ures user minthogy vegigiteraljon - LINQ kellene*/
             foreach (User user in await _context.Users.ToListAsync())
             {
-                if (user.GetNumberOfPosts() > tempUser.GetNumberOfPosts())
+                if (user.NumberOfPosts > tempUser.NumberOfPosts)
                 {
                     tempUser = user;
                 }

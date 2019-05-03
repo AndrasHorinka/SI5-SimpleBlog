@@ -32,7 +32,12 @@ namespace MySimpleBlog
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<APIContext>(opt => opt.UseInMemoryDatabase("RIP"));
+            //services.AddDbContext<APIContext>(opt => opt.UseInMemoryDatabase("RIP"));
+
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<APIContext>
+                (options => options.UseSqlServer(connection));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -21,6 +21,7 @@ namespace MySimpleBlog.Controllers
         {
             return View(await _context.Posts
                 .Include(p => p.User)
+                    .ThenInclude(u => u.Posts)
                 .ToListAsync());
         }
 

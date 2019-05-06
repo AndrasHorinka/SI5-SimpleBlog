@@ -18,6 +18,15 @@ namespace MySimpleBlog.Data
             return this.Posts.Count;
         }
 
+        [Display(Name = "Number of posts")]
+        public int NumberOfPosts
+        {
+            get
+            {
+                return this.Posts.Count;
+            }
+        }
+
         public int CompareTo(object obj)
         {
             User otherUser = (User)obj;
